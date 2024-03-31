@@ -1,0 +1,462 @@
+*{
+  padding:0;
+  margin:0;
+}
+
+.take-car{
+  width:100%;
+  height:99px;
+  background-color: #313131;;
+  margin-top:px;
+  justify-content:center;
+}
+.take-car>div{
+  text-align: center;
+  padding:20px;
+  font-size: 29px;
+  font-weight: 500;
+  color: #fff;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+p{
+  display: inline;
+}
+.left-button{
+  position: absolute;
+  background-color: white;
+  top:250px;
+  left:20px;
+  width:60px;
+  height:60px;
+  color:black;
+  border:none;
+  border-radius: 50%;
+  opacity:0.5;
+}
+.right-button{
+  position: absolute;
+  background-color: white;
+  top:250px;
+  right:20px;
+  width:60px;
+  height:60px;
+  color:black;
+  border:none;
+  border-radius: 50%;
+  opacity:0.5;
+}
+.know-button{
+  position:absolute;
+  width:190px;
+  height:55px;
+  background-color:transparent;
+  top:400px;
+  left:100px;
+  white-space: nowrap;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  border: 1.5px solid #fff;
+  text-decoration: none;
+  padding: 10px 36px 12px;
+  line-height: 100%;
+  border-radius: 10px;
+  display: inline-block;
+  font-family: source sans pro,sans-serif!important;
+}
+.know-button:hover{
+  background-color:rgb(255, 47, 47);
+  border:none;
+}
+.know-button:active{
+  opacity:0.5;
+}
+.text1{
+  justify-content: center;
+  text-align: center;
+  padding:20px;
+  color:black;
+  font-weight:540;
+  margin-bottom: 50px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.car-main{
+  margin-left:3.5vw;
+  margin-right:0vw;
+  padding:15px;
+}
+.car-main>button{
+  height:180px;
+  border-radius: 10%;
+  border:1px solid rgba(36,39,44,0.25);
+  font-size:19px;
+  white-space: nowrap;
+  background-color:white;
+  margin-left:20px;
+  margin-bottom:20px;
+  justify-content: space-between;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-weight: 300;
+  transition: transform 0.3s;
+  cursor: pointer;
+  aspect-ratio: 1; /* Sets the aspect ratio to 1:1 */
+  width: 100%;     /* Sets the width to 100% of the container */
+  max-width: 180px;
+}
+.car-main>button:hover{
+  /* background-color:rgb(233, 233, 233,); */
+  border-radius: 15px;
+  -webkit-box-shadow: 5px 5px 15px 5px #f1f1f1;
+  box-shadow: 5px 5px 15px 5px #f1f1f1;
+  color:#ce0e2d;
+  justify-content: center;
+  text-align: center;
+  transform: scale(1.1);
+}
+.car-main>button>img{
+  width: 60%;     /* Sets the width to 100% of the container */
+  height: 60%;    /* Sets the height to 100% of the container */
+  object-fit:cover;
+}
+.text2{
+  background-color:white;
+  text-align: center;
+}
+.text2>h2{
+  padding:5px;
+  font-size:39px;
+  font-family:'Times New Roman', Times, serif;
+}
+.text2>h1{
+  padding:20px;
+  font-size:60px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.main-gallery{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-auto-rows: 100px;
+  row-gap:3px;
+  column-gap: 2px;
+}
+
+.main-gallery>div{
+  overflow: hidden;
+}
+.main-gallery>div>img {
+  position: relative;
+  /* Add any other styles for the image container */
+  transition: transform 4s ease-in-out, filter 4s ease-in-out;
+  
+}
+
+.main-gallery>div>img:hover {
+  transform: scale(1.15);
+  filter: brightness(70%);
+  /* Adjust the brightness as needed */
+}
+
+.main-gallery>div>img::before,
+.main-gallery>div>img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+ 
+}
+
+.main-gallery>div>img:hover::before,
+.main-gallery>div>img:hover::after {
+  opacity: 1;
+
+}
+
+.main-gallery>div>img::before {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .2)), to(rgba(0, 0, 0, .7)));
+  background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .7));
+}
+
+.main-gallery>div>img{
+  width:100%;
+}
+.gallery2,
+.gallery3,
+.gallery4,
+.gallery5,
+.gallery6,
+.gallery7,
+.gallery9,
+.gallery10,
+.gallery11,
+.gallery12,
+.gallery13,
+.gallery14,
+.gallery15,
+.gallery16,
+.gallery17,
+.gallery18{
+  grid-column:span 1;
+  grid-row: span 2;
+  position: relative;
+}
+.gallery8,
+.gallery13,
+.gallery1{
+  grid-row:span 4;
+  grid-column: span 2;
+  position: relative;
+}
+.insidegallery{
+  display: inline;
+  position: absolute;
+  color:black;
+  left:10px;
+  bottom:5px;
+  color:white;  
+  -webkit-text-stroke: 0.4px black;
+  font-size: 24px;
+  font-weight: 500;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.insidegallery1{
+  -webkit-text-stroke:none;
+  color:black;
+}
+.orderlist{
+  display: flex;
+  flex-direction: row;
+  padding:15px;
+}
+.orderlist>li{
+  display: flex;
+  margin-right:30px;
+  border:1px solid #f75d34;
+  padding:5px 10px;
+  border-radius: 2px;
+  background-color:white;
+  color:#f75d34;  
+}
+.orderlist>li:hover{
+  background-color: #f75d34;
+  color: white;
+  transition:0.3s ;
+  transform: scale(1.1);
+}
+/* .orderlist>li:active{
+  background-color: #f75d34;
+  color:white;
+
+} */
+.inner1,
+.inner2 {
+  padding:1em;
+  padding-left:7px;
+  padding-right:0px;
+  column-gap: 5px;
+  overflow: hidden;
+}
+.newcard {
+  margin: 0 0.5em;
+  /* box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18); */
+  border: none;
+  width:261px;
+  border:1px solid rgba(171, 171, 171,0.4);
+  border-top:none;
+  height:320px;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 2px;
+}
+.previcon,
+.nexticon{
+  width:34px;
+  margin:5px;
+}
+.prev,
+.next {
+  width: 6vh;
+  height: 6vh;
+  border-radius:50%;
+  top:50%;
+  transform: translateY(-50%);
+  position:absolute;
+  width:45px;
+  height:45px;
+  background-color:transparent;
+  border:none;
+}
+@media (min-width: 768px) {
+  .item1 {
+    margin-right: 0;
+    display: block;
+  }
+  .inner1,
+  .inner2 {
+    display: flex;
+  }
+}
+.newcard .img-wrapper {
+    max-width: 100%;
+    height: 11em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.newcard img {
+    max-height: 100%;
+}
+@media (max-width: 767px) {
+  .newcard .img-wrapper {
+    height: 17em;
+  }
+}
+.carouselfirstone{
+  position: relative;
+}
+
+.next{
+  position: absolute;
+  right: 0px;
+}
+.title1{
+  display: flex;
+  font-size: 19px;
+  font-weight:500;
+  margin-bottom: 1px;
+  font-family: 'Times New Roman', Times, serif;
+  white-space: normal;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+.title2{
+  font-family:'Times New Roman', Times, serif;
+  margin: 2px 0 0;
+  color: #24272c;
+  font-size: 16px;
+  font-weight:550;
+}
+.checkbutton{
+  background: #fff;
+  border: 1px solid #f75d34;
+  border-radius: 2px;
+  color: #f75d34;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  height: 40px;
+  letter-spacing: 0;
+  line-height: 36px;
+  margin-top: 20px;
+  max-width: 245px;
+  overflow: hidden;
+  padding: 0 5px;
+  text-align: center;
+  text-overflow: ellipsis;
+  transition: all .4s ease;
+  white-space: nowrap;
+  width: 100%;
+}
+.checkbutton:hover{
+background-color:#f75d34 ;
+  color:#fff;
+}
+.card-body{
+  Padding:2px 10px 10px 10px;
+}
+.carone{
+  border:1px solid rgba(171, 171, 171,0.4);
+  margin:10px;
+}
+.latest{
+  margin:10px;
+  margin-left:16px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-weight: 540;
+}
+.carouselfirstone{
+  overflow:hidden;
+}
+.newcard:hover{
+  transform: scale(1.1);
+}
+.maptitle{
+  font-weight: 700;
+  -webkit-text-stroke: 0.9px white;
+  text-align: center;
+  margin:2% 2%;
+}
+.sub-map{
+  display: flex;
+  font-family: 'Times New Roman', Times, serif;
+}
+.mapcontent{
+  padding-left:30px;
+}
+.mapitem{
+  margin-left:1%;
+}
+.map-dealer{
+  font-weight: 700;
+  font-size: 25px;
+  display: block;
+  margin-bottom: -10px;  
+  font-family: 'Times New Roman', Times, serif;
+}
+.map-hari{
+  font-size: 30px;
+  color:rgb(213, 10, 44);
+  font-weight: 700;
+  font-family: 'Times New Roman', Times, serif;
+  display: inline;
+}
+.map-showroom{
+  font-size: 18px;
+  color:rgb(115, 115, 115);
+  font-family: 'Times New Roman', Times, serif;
+}
+.map-add{
+  font-size: 18px;
+  color:rgb(84, 84, 84);
+  font-family: 'Times New Roman', Times, serif;
+  display: block;
+  margin-top: 18px;
+}
+.map-send{
+  color:black;
+  font-weight:550;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: -15px;
+  display: block;
+}
+.map-map{
+  font-size: 18px;
+  color:rgb(206, 14, 45);
+
+}
+/* CSS styles for screens with a viewport width of 768 pixels or more */
+@media screen and (min-width: 768px) {
+  /* CSS styles to apply when viewport width is 768 pixels or more */
+  .mapitem {
+      width:auto;
+      height:100vh;     
+  }
+}
+
+/* CSS styles for screens with a viewport width less than 768 pixels */
+@media screen and (min-width: 767px) {
+  /* CSS styles to apply when viewport width is less than 768 pixels */
+  .carmain {
+      padding:5px;
+
+  }
+}

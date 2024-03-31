@@ -1,0 +1,150 @@
+*{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+.maindiv{
+  padding-left:30px;
+  padding-right:0px;
+
+}
+.class1{
+  padding-top:102px;
+}
+.class1>p{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-weight: 500;
+  font-size:30px;
+}
+
+.count>p{
+  font-family:'Times New Roman', Times, serif;
+  font-weight:400;
+  font-size:20px;
+}
+.count>p>span{
+  font-family: 'Times New Roman', Times, serif;
+}
+.models>p{
+  display: inline;
+  font-size: 18px;
+  font-weight: 400;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.modelcars {
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr 1fr; /* Change to row */
+  column-gap: 20px;
+  row-gap: 20px;
+}
+@media screen and (max-width:768px) {
+  .modelcars {
+    grid-template-columns:1fr 1fr;
+  }
+}
+@media screen and (max-width:768px) {
+  .modelcars {
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+
+.cardiv {
+  width: 264px;
+  height: 297px;
+  transition: transform 0.3s ease-in-out;
+  border-radius:10px; 
+  cursor: pointer;
+}
+.cardiv:hover{
+  box-shadow: 0 4px 8px rgba(0, 0, 0,0.2);
+  transform: scale(1.1); /* Zoom in by 10% */
+
+}
+
+.carimg>img{
+  max-width: 100%; /* Set the maximum width to 100% of its container */
+  max-height: 100%; /* Set the maximum height to 100% of its container */
+  width: auto; /* Maintain the original aspect ratio */
+  height: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.textcar {
+  width: 247px;
+  height: 102.9px;
+  margin-left:8px;
+  text-overflow: ellipsis;
+  white-space: nowrap; /* Prevents text from wrapping */
+  overflow: hidden; 
+}
+.carimg {
+  width: 264px;
+  height: 180px;
+}
+.textcar>P{
+  display: inline;
+  color:#262626;
+  font-family: 'Times New Roman', Times, serif;
+}
+.textcar>.carmodel{
+  color:gray;
+}
+.carname{
+  font-size:22px;
+  font-weight:500;
+}
+.text>.carmodel{
+  font-size:16px;
+  font-weight:400;
+  font-family:'Times New Roman', Times, serif;
+}
+.textcar>.carmilage{
+  font-size: 17px;
+  font-weight:400;
+  font-family: 'Times New Roman', Times, serif;
+  color:rgba(87, 87, 87,0.9);
+}
+.carprice{
+  font-size:19px;
+  font-weight:500;
+  font-family:'Times New Roman', Times, serif;
+}
+.about{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.line,
+.lastline{
+  background-color: rgb(181, 181, 181);
+  width:auto;
+  height:1px;
+  margin-top:60px;
+  margin-bottom:20px;
+}
+.lasttext{
+  color:gray;
+  font-family: 'Times New Roman', Times, serif;
+  padding:10px;
+}
+.lastline{
+  margin-top:0px;
+}
+.aboutcontent>ul{
+  margin-bottom: 16px;
+  color:rgb(102, 102, 102);
+}
+.aboutcontent>ul:nth-child(1),
+.contact>ul:nth-child(1),
+.other>ul:nth-child(1),
+.exper>ul:nth-child(1){
+  font-weight:700;
+  font-size: 16px;
+  color:black;
+}
+
+.contact>ul,
+.other>ul{
+  color:rgb(94, 94, 94);
+}
+

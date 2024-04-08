@@ -11,10 +11,21 @@ body {
   height: 100vh;
   /* overflow: hidden; */
   margin-left: 0;
-  
+  /* position:static; */
+}
+.desk{
+}
+.subshadow h1{
+  color:white;
+  padding-left:45px;
+  font-size: 56px;
+  font-family: 'Times New Roman', Times, serif !important;
+  align-items:baseline;
 }
 .mainimg {
-  top:76px;
+  /* top:11vh; */
+  /* display: block; */
+  position:static;
   position:relative;
   width: 100%;
   height: 100%;
@@ -23,23 +34,33 @@ body {
 .shadow{
   width:100%;
   background-color:rgb(38, 38, 38);
-  height:280px;
-  margin-top: 75px;
+  /* height:36%; */
+  /* margin-top: 75px; */
   /* margin-top:190px; */
   /* margin-top:570px; */
-  /* filter:drop-shadow(-20px -40px 0px rgb(38, 38, 38, 0.70)); */
-
+  
   /* position: static;
   margin: 0 auto;
   max-width: 79.6875rem;
   width: auto !important; */
+  /* display: block; */
+  /* margin-top:20px; */
 }
 .subshadow{
-width: 100%;
-height: 139px;
-position: absolute;
-top:90%;
-background: linear-gradient(to bottom,rgba(38,38,38,0) 0,#262626 100%);
+  width: 100%;
+  /* height:110px; */
+  /* filter:drop-shadow(-0px -40px 0px rgb(38, 38, 38, 0.70)); */
+  background:linear-gradient(to bottom,rgba(38,38,38,0) 0,#262626 100%);
+  /* height: 119px;   */
+  /* vertical-align: end; */
+  /* display: flex;
+  -ms-flex-align: end; */
+  position: absolute;
+  z-index: 30;
+  /* background-color: ; */
+  bottom:0px;
+/* z-index: 30; */
+/* top:123vh; */
 }
 .hari{
   overflow:hidden;
@@ -49,10 +70,12 @@ display: inline;
   color:#fff;
 }
 .carone{
-  position: absolute;
-  margin-top:70px;
+  /* position: absolute; */
+  /* margin-top:70px; */
 }
 .mainname{
+  
+  white-space: inherit;
   color:#fff;
   margin-left: 45px;
   /* margin-top:-25px; */
@@ -61,6 +84,7 @@ display: inline;
   font-family: 'Times New Roman', Times, serif;
 }
 .carmodel{
+  white-space:initial;
   font-size: 25px;
   font-family: 'Kohinoor Zerone';
   margin-left: 45px;
@@ -99,13 +123,16 @@ display: inline;
   color:#fff;
   margin-left:45px;
   font-family: 'Kohinoor Zerone';
-  margin-top:30px;
+  /* margin-top:30px; */
   line-height: 0.6;
-  width:200px;
+  /* width:200px; */
 }
 .maintable{
   display: flex;
-  flex-direction:row;
+  /* flex-direction:row; */
+  /* flex:1; */
+  padding:10px;
+  justify-content: space-between;
 }
 .table{
   display: flex;
@@ -148,13 +175,13 @@ display: inline;
 }
 .spec{
   width:auto;
-  height:500;
-  background-color:#fff;
+  /* height:500; */
+  background-color:#ffff;
   color:black;
-  display: block;
+  /* display: block; */
   border:1px solid rgba(171, 171, 171,0.5);
-  margin:22px;
-  padding:15px;
+  margin:12px;
+  padding:10px;
 } 
 .button{
   display: flex;
@@ -217,6 +244,11 @@ display: inline;
   font-size: 18px !important;
   font-family: 'Times New Roman', Times, serif;
   color:rgb(72, 72, 72);
+  text-wrap: wrap;
+  padding:0px;
+  margin:0px;
+  text-align: center;
+  display: flex;
 }
 
 
@@ -225,12 +257,12 @@ body, h1, h2, p, iframe {
   padding: 0;
 }
 
-
 .mainone {
   max-width:auto;
+  display: grid;
   margin: 0 auto;
-  padding-left:2%;
-  padding-right: 2%;
+  padding-left:6%;
+  padding-right: 6%;
   text-align: center;
 }
 
@@ -244,10 +276,10 @@ body, h1, h2, p, iframe {
 }
 
 
-.videosource {
+.videosource{
   width: 100%;
-  height: 500px;
-  border: 0; 
+  height: 80vh;
+  border: 1px solid gray; 
 }
 .addingimg{
   width: 100%;
@@ -273,7 +305,7 @@ body, h1, h2, p, iframe {
   border-radius: 5px;
   cursor: pointer;
 }
-.videosource{
+.videosource:hover{
   cursor: pointer !important;
 }
 .texting{
@@ -288,8 +320,104 @@ body, h1, h2, p, iframe {
 }
 .interior{
   font-family: 'Times New Roman', Times, serif;
+  padding-left:60px;
+  font-size: 28px;
 }
 .interiormain{
   font-family: 'Times New Roman', Times, serif;
   padding-left: 20px;
+  font-weight: 500;
+  font-size: 43px;
+}
+/* .maindiv{
+  display: grid ;
+  grid-template-columns: 1fr 1fr;
+  row-gap:10px;
+  
+}
+.subdiv{
+  width:100%;
+}
+tr{
+  text-align: center;
+}
+table{
+  flex:1;
+  border:2px solid black;
+  border-collapse: collapse;
+  width:100%;
+}
+th,
+tr,
+td{
+  border:2px solid black;
+}
+@media screen and (max-width:600px){
+  .maindiv{
+    grid-template-columns: 1fr;
+  }
+} */
+
+table {
+  /* -webkit-text-stroke: px; */
+  font-size: 20px;
+  font-weight: 300 !important;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.maindiv2{
+  /* font-weight: 400; */
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+  padding:30px 40px;
+  display: grid ;
+  grid-template-columns: 1fr 1fr;
+  /* row-gap:10px; */
+  /* gap:0px; */
+  /* grid-gap:20px; */
+  white-space: nowrap;
+  column-gap:30px;
+}
+.subdiv{
+  width:100%;
+  /* gap:10px; */
+}
+th{
+  display: flex;
+  -ms-flex-align: start;
+  align-items: center;
+}
+tr{
+  display: flex;
+  justify-content:space-between;
+  /* row-gap: 10px !important; */
+  align-items: center;
+  text-align: center;
+  padding-bottom: 20px;
+  /* -ms-flex-align: end; */
+  /* row-gap:10px !important; */
+}
+table{
+  flex:1;
+  /* border:1px solid gray; */
+  border:none;
+  border-collapse: collapse;
+  width:100%;
+}
+td{
+  color:rgb(104, 104, 104);
+}
+@media screen and (max-width:600px){
+  .maindiv2{
+    grid-template-columns: 1fr;
+    white-space:inherit;
+    padding:10px 20px;
+  }
+  table{
+    font-size:20px;
+  }
+  .maintable{
+    flex-flow: wrap;
+  }
+  .carone{
+    margin:0px;
+  }
 }

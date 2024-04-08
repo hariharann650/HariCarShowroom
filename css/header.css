@@ -14,6 +14,23 @@
 #navbar1{
   width:auto;
 }
+.containing{
+  padding:0px;
+}
+@media screen and (max-width:700px) {
+  
+  .forminput{
+    width:50px;
+    /* overflow:hidden; */
+  }
+  .logoimg{
+    width:90px !important;
+  }
+  .header-img{
+    /* margin-left:30px; */
+    width:106px;
+  }
+}
 .middle{
   display:flex;
   padding-left:90px;
@@ -21,7 +38,7 @@
   justify-content: space-between;
 }
 .header-img{
-  /* margin-left:30px; */
+
   width:166px;
 }
 .logo-img{
@@ -38,16 +55,17 @@
  
 }
 .left-section{
-  padding-left:20px;
   display: flex;
   flex-direction:row;
   justify-content: space-evenly;
-  flex:0.3;
+  flex:1;
+  width:0;
 }
 .right-section{
   display:flex;
   flex-direction: row;
-  flex:0.4;
+  flex:1;
+  width:0;
 }
 
 .logoimg{

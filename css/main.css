@@ -10,6 +10,7 @@
   margin-top:px;
   justify-content:center;
 }
+
 .take-car>div{
   text-align: center;
   padding:20px;
@@ -17,12 +18,12 @@
   font-weight: 500;
   color: #fff;
   font-family: Georgia, 'Times New Roman', Times, serif;
-
 }
 
 p{
   display: inline;
 }
+
 .left-button{
   position: absolute;
   background-color: white;
@@ -73,6 +74,11 @@ p{
 .know-button:active{
   opacity:0.5;
 }
+.mainbanner{
+  position: relative;
+  background-size: cover;
+  background: no-repeat;
+}
 .text1{
   justify-content: center;
   text-align: center;
@@ -86,27 +92,28 @@ p{
   margin-left:3.5vw;
   margin-right:0vw;
   padding:15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 10px;
 }
 .car-main>button{
-  height:180px;
   border-radius: 10%;
   border:1px solid rgba(36,39,44,0.25);
   font-size:19px;
   white-space: nowrap;
   background-color:white;
-  margin-left:20px;
   margin-bottom:20px;
+  
   justify-content: space-between;
   font-family:Georgia, 'Times New Roman', Times, serif;
   font-weight: 300;
   transition: transform 0.3s;
   cursor: pointer;
-  aspect-ratio: 1; /* Sets the aspect ratio to 1:1 */
-  width: 100%;     /* Sets the width to 100% of the container */
+  aspect-ratio: 1; 
+  width: 100%;     
   max-width: 180px;
 }
 .car-main>button:hover{
-  /* background-color:rgb(233, 233, 233,); */
   border-radius: 15px;
   -webkit-box-shadow: 5px 5px 15px 5px #f1f1f1;
   box-shadow: 5px 5px 15px 5px #f1f1f1;
@@ -116,9 +123,32 @@ p{
   transform: scale(1.1);
 }
 .car-main>button>img{
-  width: 60%;     /* Sets the width to 100% of the container */
-  height: 60%;    /* Sets the height to 100% of the container */
+  width: 60%;   
+  height: 60%;    
   object-fit:cover;
+}
+@media (min-width: 768px) {
+  .item1 {
+    margin-right: 0;
+    display: block;
+  }
+  .inner1,
+  .inner2 {
+    display: flex;
+  }
+}
+@media (max-width: 767px) {
+  .newcard .img-wrapper {
+    height: 17em;
+  }
+  .item1 {
+    margin-right: 0;
+    display: block;
+  }
+  .inner1,
+  .inner2 {
+    display: flex;
+  }
 }
 .text2{
   background-color:white;
@@ -147,7 +177,9 @@ p{
 }
 .main-gallery>div>img {
   position: relative;
-  /* Add any other styles for the image container */
+  width:100%;
+  background: no-repeat;
+  background-size: cover;
   transition: transform 4s ease-in-out, filter 4s ease-in-out;
   
 }
@@ -155,7 +187,6 @@ p{
 .main-gallery>div>img:hover {
   transform: scale(1.15);
   filter: brightness(70%);
-  /* Adjust the brightness as needed */
 }
 
 .main-gallery>div>img::before,
@@ -169,13 +200,11 @@ p{
   z-index: 1;
   opacity: 0;
   transition: opacity 0.3s ease;
- 
 }
 
 .main-gallery>div>img:hover::before,
 .main-gallery>div>img:hover::after {
   opacity: 1;
-
 }
 
 .main-gallery>div>img::before {
@@ -231,8 +260,11 @@ p{
 }
 .orderlist{
   display: flex;
+  overflow: hidden;
   flex-direction: row;
-  padding:15px;
+  flex-wrap:wrap;
+  row-gap:10px;
+
 }
 .orderlist>li{
   display: flex;
@@ -249,11 +281,7 @@ p{
   transition:0.3s ;
   transform: scale(1.1);
 }
-/* .orderlist>li:active{
-  background-color: #f75d34;
-  color:white;
 
-} */
 .inner1,
 .inner2 {
   padding:1em;
@@ -264,7 +292,6 @@ p{
 }
 .newcard {
   margin: 0 0.5em;
-  /* box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18); */
   border: none;
   width:261px;
   border:1px solid rgba(171, 171, 171,0.4);
@@ -273,34 +300,22 @@ p{
   transition: transform 0.3s ease-in-out;
   border-radius: 2px;
 }
-.previcon,
-.nexticon{
-  width:34px;
-  margin:5px;
-}
 .prev,
 .next {
-  width: 6vh;
-  height: 6vh;
   border-radius:50%;
   top:50%;
   transform: translateY(-50%);
   position:absolute;
   width:45px;
   height:45px;
-  background-color:transparent;
+  background-color: gray;
+  padding:5px;
+  overflow: hidden;
+  color:white;
   border:none;
+
 }
-@media (min-width: 768px) {
-  .item1 {
-    margin-right: 0;
-    display: block;
-  }
-  .inner1,
-  .inner2 {
-    display: flex;
-  }
-}
+
 .newcard .img-wrapper {
     max-width: 100%;
     height: 11em;
@@ -311,11 +326,7 @@ p{
 .newcard img {
     max-height: 100%;
 }
-@media (max-width: 767px) {
-  .newcard .img-wrapper {
-    height: 17em;
-  }
-}
+
 .carouselfirstone{
   position: relative;
 }
@@ -404,6 +415,11 @@ background-color:#f75d34 ;
 }
 .mapitem{
   margin-left:1%;
+  display: grid;
+  grid-template-columns:1fr 1fr;
+}
+.iframediv>iframe{
+  width: 100%;
 }
 .map-dealer{
   font-weight: 700;
@@ -441,22 +457,53 @@ background-color:#f75d34 ;
 .map-map{
   font-size: 18px;
   color:rgb(206, 14, 45);
-
 }
-/* CSS styles for screens with a viewport width of 768 pixels or more */
-@media screen and (min-width: 768px) {
-  /* CSS styles to apply when viewport width is 768 pixels or more */
-  .mapitem {
-      width:auto;
-      height:100vh;     
+
+@media screen and (max-width:1500px){
+  .car-main{
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  .main-gallery{
+    grid-template-columns: repeat(3,1fr);
   }
 }
-
-/* CSS styles for screens with a viewport width less than 768 pixels */
-@media screen and (min-width: 767px) {
-  /* CSS styles to apply when viewport width is less than 768 pixels */
-  .carmain {
-      padding:5px;
-
+@media screen and (max-width:1200px){
+  .car-main{
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+@media screen and (max-width:800px){
+  .car-main{
+    margin:0px;
+  }
+  .main-gallery{
+    grid-template-columns: repeat(2,1fr);
+  }
+  .car-main>button{
+    margin:0px;
+  }
+  .car-main{
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (max-width:500px) {
+  .mapitem{
+    grid-template-columns:1fr;
+  }
+  .main-gallery{
+    grid-template-columns: repeat(1,1fr);
+  }
+  .car-main{
+    margin:0px;
+  }
+  .car-main>button{
+    margin:0px;
+  }
+  .car-main{
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr;
   }
 }

@@ -1,0 +1,91 @@
+.top-level{
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+.main-price{
+  width:940px;
+  height: 290px;
+  background-color: rgb(193, 193, 193);
+  justify-content: center;
+  /* align-items: center; */
+  text-align: center;
+  position: relative;
+}
+.forming{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap:0px;
+  row-gap: 50px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.forming:nth-child(1){
+  margin-left:20px;
+}
+.top-price{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.top-para{
+  text-align: center;
+}
+.cancel-btn{
+  border:none;
+  width:auto;
+  position:absolute;
+  top:10px;
+  right:10px;
+  cursor: pointer;
+  padding:3px;
+  background-color: white;
+}
+.top-para{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+}
+.inputing{
+  padding:8px;
+  border:none;
+  border-bottom: 1px solid black;
+}
+.selecting{
+  padding:8px 7px;
+  min-width: 180px;
+  border:none;
+  font-size: 15px;
+  border-bottom: 1px solid black;
+}
+option{
+  font-size: 15px;
+  font-weight: 500;
+}
+.inputing::placeholder{
+  font-size: 16px;
+  color:black;
+}
+.disclaimer{
+  font-size: 14px;
+  display: inline;
+}
+.submit-div{
+  padding-right:10px;
+}
+.submit-div button{
+  background-color: black;
+  color:#ffff;
+  font-weight:lighter;
+  padding:14px;
+  font-size: 18px;
+  border:none;
+}
+.bottom-div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top:30px;
+}

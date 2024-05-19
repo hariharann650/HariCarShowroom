@@ -2,11 +2,7 @@
   font-family: Georgia, 'Times New Roman', Times, serif;
 
 }
-.maindiv1{
-  /* padding-left:30px; */
-  padding-right:0px;
-  
-}
+
 .class1{
   padding-top:102px;
 }
@@ -14,12 +10,14 @@
   font-family:Georgia, 'Times New Roman', Times, serif;
   font-weight: 500;
   font-size:30px;
+  margin-left:30px;
 }
 
 .count>p{
   font-family:'Times New Roman', Times, serif;
   font-weight:400;
   font-size:20px;
+  margin-left:30px;
 }
 .count>p>span{
   font-family: 'Times New Roman', Times, serif;
@@ -64,16 +62,51 @@
   .count{
     margin-left:20px;
   }
+  .modelcars{
+    padding:0px;
+    margin-left:10px;
+  }
+  .class1{
+    padding-top:70px;
+  }
+  .class1>p{
+    font-size:20px;
+    margin-left:0px;
+  }
+  .cardiv {
+    width:300px !important;
+    height: 310px !important;
+    border-radius:10px;
+    margin-bottom: 10px; 
+  }
+  .count>p{
+    font-size:20px;
+    margin-left:0px;
+  }
+  .aboutcontent>ul{
+    margin-bottom: 0px;
+    margin-left:5px;
+    padding-left:4px;
+    color:rgb(102, 102, 102);
+  }
+  .contact>ul{
+    padding:0px;
+    margin-right: 5px;
+  }
+  .other>ul{
+    padding:0px;
+    margin-left:5px;
+  }
 }
 
 
 .cardiv {
   width: 264px;
-  
   height: 297px;
   transition: transform 0.3s ease-in-out;
   border-radius:10px; 
   cursor: pointer;
+  background-color: rgb(237, 237, 237);
 }
 .cardiv:hover{
   box-shadow: 0 4px 8px rgba(0, 0, 0,0.2);
@@ -98,8 +131,8 @@
   overflow: hidden; 
 }
 .carimg {
-  width: 264px;
-  height: 180px;
+  width: 100%;
+  object-fit:contain;
 }
 .textcar>P{
   display: inline;

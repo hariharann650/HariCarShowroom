@@ -6,9 +6,9 @@
 .take-car{
   width:100%;
   height:99px;
-  background-color: #313131;;
-  margin-top:px;
-  justify-content:center;
+  font-size: 24px;
+  background-color: #313131;
+
 }
 
 .take-car>div{
@@ -84,8 +84,12 @@ p{
   text-align: center;
   padding:20px;
   color:black;
-  font-weight:540;
-  margin-bottom: 50px;
+  font-weight:500;
+  margin-bottom: 10px;
+  background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-family: 'Times New Roman', Times, serif;
 }
 .car-main{
@@ -127,7 +131,7 @@ p{
   height: 60%;    
   object-fit:cover;
 }
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .item1 {
     margin-right: 0;
     display: block;
@@ -136,8 +140,8 @@ p{
   .inner2 {
     display: flex;
   }
-}
-@media (max-width: 767px) {
+} */
+/* @media (max-width: 767px) {
   .newcard .img-wrapper {
     height: 17em;
   }
@@ -149,7 +153,7 @@ p{
   .inner2 {
     display: flex;
   }
-}
+} */
 .text2{
   background-color:white;
   text-align: center;
@@ -402,7 +406,7 @@ background-color:#f75d34 ;
 }
 .maptitle{
   font-weight: 700;
-  -webkit-text-stroke: 0.9px white;
+  -webkit-text-stroke: 0.7px white;
   text-align: center;
   margin:2% 2%;
 }
@@ -420,6 +424,7 @@ background-color:#f75d34 ;
 }
 .iframediv>iframe{
   width: 100%;
+
 }
 .map-dealer{
   font-weight: 700;
@@ -501,9 +506,30 @@ background-color:#f75d34 ;
   }
   .car-main>button{
     margin:0px;
+    padding: '';
+    max-width: 140px;
+    /* margin-left: px; */
   }
   .car-main{
     flex-wrap: wrap;
     grid-template-columns: 1fr 1fr;
+  }
+  .orderlist{
+    padding:10px;
+  }
+  .iframediv>iframe{
+    width: 100%;
+    padding:3px;
+  }
+  .orderlist >li{
+    margin-right:3px;
+  }
+  .text2>h1{
+    padding:10px;
+    font-size:40px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  }
+  .mainbanner{
+    padding-top:40px;
   }
 }

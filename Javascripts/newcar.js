@@ -116,15 +116,15 @@ var hellfireData =
   
 
   <div class="maintable">
-    <div class="table column-gap-5 row-gap-3">
+    <div class="table ">
       <p class="para">${hariCar.pricecount}</p>
       <p class="para1">Starting from</p>
     </div>
-    <div class="table1 row-gap-3">
+    <div class="table1 ">
       <p class="para">${hariCar.mileage}</p>
       <p class="para1">Fuel consumption, combined</p>
     </div>
-    <div class="table2 row-gap-3">
+    <div class="table2 ">
       <p class="para">${hariCar.variant}</p>
       <p class="para1">Engine and Fuel Type</p>
     </div>
@@ -245,7 +245,7 @@ var hellfireData =
 </div>
 <div class="rotate pt-4 ">
 <h1 class="pb-4 interiormain">${hariCar.model} 360 view</h1>
-<h2 class="pb-4 text-md-center interior">${hariCar.model} 360 view</h2>
+<h2 class="pb-4 text-md-center interior">${hariCar.model} Interior view</h2>
 <div class="mainone">
 
   <iframe class="videosource iframehide" id="iframehide" src="${hariCar.iframeInterior}" frameborder="0">
@@ -256,7 +256,7 @@ var hellfireData =
 </div>
 </div>
 <div class="rotate pt-4 ">
-<h2 class="pb-4 text-md-center pt-5 pb-4 interior">${hariCar.model} 360 view</h2>
+<h2 class="pb-4 text-md-center pt-5 pb-4 interior">${hariCar.model}Exterior view</h2>
 <div class="mainone">
 
   <iframe class="videosource pointer-event" src="${hariCar.iframeExterior}" frameborder="0">

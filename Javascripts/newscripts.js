@@ -8,7 +8,7 @@ import { latestcar, suv  , luxury, hatchback,sedan,mpv} from "./carModels.js";
 // console.log(orange1);
 // orange1();
 
-console.log(noing);
+// console.log(noing);
 
 function handleButtonClick(event) {
   var uniqueId = event.currentTarget.getAttribute('data-unique-id');
@@ -150,7 +150,7 @@ selectbtn.forEach(button => {
         
       // let  appling = apple
 
-      console.log(apple);
+      // console.log(apple);
       function aahin(){
         var latest1 = apple.map(cars =>`<div class="carousel-item active item1 ak2" >
         <div class="card newcard">
@@ -213,7 +213,7 @@ if (window.matchMedia("(min-width: 768px)").matches) {
   document.querySelector("#carouselExampleControls1 .next").addEventListener("click", function () {
     if (scrollPosition1 < carouselWidth1 - cardWidth1 * 4) {
       scrollPosition1 += cardWidth1;
-      console.log("the schorl");
+      // console.log("the schorl");
       carouselInner1.scrollTo({
         left: scrollPosition1,
         behavior: 'smooth'
@@ -356,4 +356,5 @@ let abouting =`<div class="line">
   <div class="lasttext">
     © 2023 Hari CarShowroom, All Rights Reserved.
   </div>`;
-document.querySelector  ('.about-main-div').innerHTML = abouting;
+
+document.querySelector('.about-main-div').innerHTML = abouting;

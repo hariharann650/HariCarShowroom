@@ -114,6 +114,22 @@
     display:inline-block ;
   }
   .logoimg{
-    width: 80px;
+    width: 70px;
   }
+  .signupdiv{
+    display: none;
+  }
+  .rightsection{
+    display: none;
+  }
+  .maindiv{
+    padding:0px;
+    justify-content:space-between;
+  }
+  .middlesection{
+    display: flex;
+    flex:1;
+    min-width:160px;
+  }
+  
 }

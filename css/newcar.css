@@ -13,8 +13,6 @@ body {
   margin-left: 0;
   /* position:static; */
 }
-.desk{
-}
 .subshadow h1{
   color:white;
   padding-left:45px;
@@ -28,7 +26,7 @@ body {
   position:static;
   position:relative;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit:cover; 
   vertical-align: middle;
 }
@@ -57,7 +55,6 @@ body {
   /* display: flex;
   -ms-flex-align: end; */
   position: absolute;
-  z-index: ;
   /* background-color: ; */
   bottom:0px;
 /* z-index: 30; */
@@ -121,7 +118,7 @@ display: inline;
   justify-content: flex-start;
   flex-direction: column;
   color:#fff;
-  margin-left:45px;
+  /* margin-left:45px; */
   font-family: 'Kohinoor Zerone';
   /* margin-top:30px; */
   line-height: 0.6;
@@ -136,7 +133,7 @@ display: inline;
 }
 .table{
   display: flex;
-  flex-direction: row;
+
   justify-content: flex-start;
   flex-direction: column;
   color:#fff;
@@ -308,10 +305,6 @@ body, h1, h2, p, iframe {
 .videosource:hover{
   cursor: pointer !important;
 }
-.texting{
-  text-wrap:;
-
-}
 .keyfeatures{
   -webkit-text-stroke: 0.7px #fff;
 }
@@ -358,7 +351,7 @@ td{
   }
 } */
 
-table {
+.subdiv> table {
   /* -webkit-text-stroke: px; */
   font-size: 20px;
   font-weight: 300 !important;
@@ -380,12 +373,12 @@ table {
   width:100%;
   /* gap:10px; */
 }
-th{
+.subdiv> th{
   display: flex;
   -ms-flex-align: start;
   align-items: center;
 }
-tr{
+.subdiv> tr{
   display: flex;
   justify-content:space-between;
   /* row-gap: 10px !important; */
@@ -395,14 +388,14 @@ tr{
   /* -ms-flex-align: end; */
   /* row-gap:10px !important; */
 }
-table{
+.subdiv > table{
   flex:1;
   /* border:1px solid gray; */
   border:none;
   border-collapse: collapse;
   width:100%;
 }
-td{
+.subdiv> td{
   color:rgb(104, 104, 104);
 }
 @media screen and (max-width:600px){
@@ -411,8 +404,15 @@ td{
     white-space:inherit;
     padding:10px 20px;
   }
-  table{
-    font-size:20px;
+  .subdiv> table{
+    font-size:17px;
+
+  }
+  .table,
+  .table1,
+  .table2{
+    margin-top:10px;
+    line-height: 1;
   }
   .maintable{
     flex-flow: wrap;
@@ -420,4 +420,92 @@ td{
   .carone{
     margin:0px;
   }
+  .carmodel{
+    font-size: 22px;
+    padding-left:10px;
+  }
+  .subshadow h1{
+    color:white;
+    margin-top:0px;
+    font-size: 46px;
+    padding-left:10px;
+    font-family: 'Times New Roman', Times, serif !important;
+    /* align-items:baseline; */
+  }
+  .subshadow{
+    top:184px;
+    height:30px;
+  }
+  .maindiv1 {
+    width: auto;
+    height: auto;
+    /* overflow: hidden; */
+    margin-left: 0;
+    /* position:static; */
+  }
+  .test,
+.test1{
+  color:#fff;
+  padding:4px 25px 4px 25px;
+  border:none;
+  font-weight: 500;
+  font-size: 20px;
+
+  /* margin-left:45px; */
+  margin-top:10px;
+  /* margin-top:20px; */
+  font-family: 'Kohinoor Zerone';
+  transition: 0.5s;
+}
+.spec{
+
+}
+.para1{
+  font-size: 18px;
+}
+.para{
+  font-size: 20px;
+}
+.spec >h1{
+  font-size: 23px;
+}
+.button1,
+.button2{
+  margin-top:10px !important;
+  font-size: 16px;
+  padding:8px 16px;
+}
+th{
+  font-size: 15px;
+  white-space: nowrap;
+}
+th>svg{
+  width:40px;
+  white-space: nowrap;
+  height:40px ;
+}
+.maindiv2{
+  padding:0px;
+}
+tr{
+  margin-bottom: 15px;
+}
+td{
+  font-size: 15px;
+  font-family: 'outfit';
+}
+.compount{
+  display: none;
+}
+.interiormain{
+  font-size: 30px;
+  font-weight: 600;
+  font-family: 'outfit';
+}
+.interior{
+  font-size: 26px;
+  font-weight: 500;
+  white-space: wrap;
+  padding-left:30px;
+}
 }

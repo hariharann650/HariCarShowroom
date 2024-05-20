@@ -441,7 +441,8 @@ tr{
     /* align-items:baseline; */
   }
   .subshadow {
-    top: 184px;
+    /* top: 42%; */
+    bottom:190px;
     height: 30px;
   }
   .maindiv1 {

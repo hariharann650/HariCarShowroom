@@ -34,6 +34,8 @@
   column-gap: 20px;
   row-gap: 20px;
   float:center;
+  height: auto;
+  align-items: center;
   padding:40px;
   /* box-sizing: border-box; */
   /* background-size: cover; */
@@ -53,10 +55,16 @@
 @media screen and (max-width: 600px) {
   .modelcars {
     grid-template-columns: 1fr;
-    column-gap: 5px;
-    row-gap: 5px;
-    float:none;
-    margin-left:20px;
+    column-gap: 0px;
+    /* row-gap: 10px; */
+    float:center;
+    width:100%;
+    margin:0px !important;
+    height:1;
+    padding-left:5% !important;
+    justify-content: center;
+    align-items: center;
+    /* margin-left:20px; */
   }
   .class1,
   .count{
@@ -77,8 +85,8 @@
     width:290px !important;
     height: 310px !important;
     border-radius:10px;
-    margin-left:5px;
-    margin-bottom: 10px; 
+
+    /* margin-bottom: 10px;  */
   }
   .count>p{
     font-size:20px;

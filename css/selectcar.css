@@ -74,9 +74,10 @@
     margin-left:0px;
   }
   .cardiv {
-    width:300px !important;
+    width:290px !important;
     height: 310px !important;
     border-radius:10px;
+    margin-left:5px;
     margin-bottom: 10px; 
   }
   .count>p{

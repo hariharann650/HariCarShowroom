@@ -224,7 +224,7 @@ if (window.matchMedia("(min-width: 768px)").matches) {
   document.querySelector("#carouselExampleControls1 .prev").addEventListener("click", function () {
     if (scrollPosition1 > 0) {
       scrollPosition1 -= cardWidth1;
-      console.log("the prev");
+      // console.log("the prev");
       carouselInner1.scrollTo({
         left: scrollPosition1,
         behavior: 'smooth'
@@ -357,4 +357,5 @@ let abouting =`<div class="line">
     © 2023 Hari CarShowroom, All Rights Reserved.
   </div>`;
 
+  
 document.querySelector('.about-main-div').innerHTML = abouting;

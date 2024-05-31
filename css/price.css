@@ -1,16 +1,15 @@
+
 .top-level{
   display: flex;
   justify-content: center;
-  height: 100vh;
   align-items: center;
+  font-family: 'outfit';
 }
 .main-price{
-  width:940px;
-  height: 290px;
-  background-color: rgb(193, 193, 193);
-  justify-content: center;
-  /* align-items: center; */
-  text-align: center;
+  width:80%;
+  margin-top:10%;
+  background-color: white;
+  align-items: center;
   position: relative;
 }
 .forming{
@@ -48,29 +47,41 @@
   flex-direction: row;
   justify-content:space-evenly;
 }
+.top-para >h1{
+  color: black;
+}
 .inputing{
   padding:8px;
   border:none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgb(45, 52, 148);
 }
 .selecting{
   padding:8px 7px;
   min-width: 180px;
   border:none;
   font-size: 15px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgb(45, 52, 148);
+  color:rgb(45, 52, 148);
 }
-option{
+.selecting>option{
   font-size: 15px;
   font-weight: 500;
 }
 .inputing::placeholder{
   font-size: 16px;
-  color:black;
+  color:rgb(45, 52, 148);
+}
+.inputing:focus{
+  outline: none;
 }
 .disclaimer{
   font-size: 14px;
-  display: inline;
+  white-space: wrap;
+  padding-left: 10px;
+  display:inline;
+  line-break:strict;
+  font-weight:550;
+  font-family:'Times New Roman', Times, serif;
 }
 .submit-div{
   padding-right:10px;
@@ -79,13 +90,73 @@ option{
   background-color: black;
   color:#ffff;
   font-weight:lighter;
-  padding:14px;
+  padding:12px;
   font-size: 18px;
   border:none;
+  border-radius:3px;
+}
+.submit-div >button:hover{
+  background-color:hsl(0, 0%, 20%) ;
 }
 .bottom-div{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top:30px;
+  margin:30px 10px;
+}
+@media screen and (max-width:600px){
+  .main-price{
+    width:90%;
+    margin:4% 0px;
+  }
+  .forming{
+    grid-template-columns: 1fr;
+    gap:0px;
+  }
+  .bottom-price{
+    margin-bottom: 10px;
+    width:100% !important;
+  }
+  .selecting{
+    margin-bottom: 10px;
+    width:100% !important ;
+  }
+  .top-price{
+    flex-direction: column;
+    width:80%;
+  }
+  .top-para >h1{
+    font-size: 22px;
+  }
+  .inputing{
+    width:100%;
+    margin-bottom: 10px;
+  }
+  .selecting{
+    width:77vw !important;
+    font-size: 14px;
+  }
+  .selecting>option{
+    padding:auto;
+    width:100%;
+  }
+  .cancel-btn{
+    float:left;
+    right:5px;
+  }
+  .disclaimer{
+    line-break: loose;
+  }
+  .bottom-div{
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .submit-div>button{
+    margin-top:10px;
+    font-size: 16px;
+    padding:2% 4% ;
+  }
+  .inputing::placeholder{
+    font-size:14px;
+  }
 }

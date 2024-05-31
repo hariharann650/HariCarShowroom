@@ -2,15 +2,12 @@
   padding:0;
   margin:0;
 }
-
 .take-car{
   width:100%;
   height:99px;
   font-size: 24px;
   background-color: #313131;
-
 }
-
 .take-car>div{
   text-align: center;
   padding:20px;
@@ -19,11 +16,9 @@
   color: #fff;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
 p{
   display: inline;
 }
-
 .left-button{
   position: absolute;
   background-color: white;
@@ -131,7 +126,7 @@ p{
   height: 60%;    
   object-fit:cover;
 }
-/* @media (min-width: 768px) {
+@media (min-width: 768px) {
   .item1 {
     margin-right: 0;
     display: block;
@@ -140,8 +135,8 @@ p{
   .inner2 {
     display: flex;
   }
-} */
-/* @media (max-width: 767px) {
+} 
+ @media (max-width: 767px) {
   .newcard .img-wrapper {
     height: 17em;
   }
@@ -153,7 +148,7 @@ p{
   .inner2 {
     display: flex;
   }
-} */
+}
 .text2{
   background-color:white;
   text-align: center;
@@ -424,7 +419,6 @@ background-color:#f75d34 ;
 }
 .iframediv>iframe{
   width: 100%;
-
 }
 .map-dealer{
   font-weight: 700;

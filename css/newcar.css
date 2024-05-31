@@ -411,10 +411,17 @@ tr{
   .maindiv2 {
     grid-template-columns: 1fr;
     white-space: inherit;
-    padding: 10px 20px;
+    padding: 0px;
   }
   .subdiv > table {
     font-size: 17px;
+  }
+  .gaping{
+    /* justify-content:end; */
+    margin-bottom: 15px !important;
+    display: inline-flex;
+    width:100%;
+    justify-content:space-between;
   }
   .table,
   .table1,
@@ -438,12 +445,40 @@ tr{
     font-size: 46px;
     padding-left: 10px;
     font-family: "Times New Roman", Times, serif !important;
-    /* align-items:baseline; */
+    align-items:baseline;
+  }
+  .mainone {
+    max-width: auto;
+    display: grid;
+    margin: 0 auto;
+    padding-left: 6%;
+    padding-right: 6%;
+    text-align: center;
+  }
+  .videosource {
+    width: 100%;
+    height:55vh;
+    border: 1px solid gray;
+    margin-bottom:3px;
+  }
+  .overlay span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 6px;
+    border-radius: 5px;
+    cursor: pointer;
   }
   .subshadow {
     /* top: 42%; */
-    bottom:190px;
-    height: 30px;
+    bottom:0px;
+    position:relative;
+    margin-top:-45px;
+    /* background-color: blue; */
+    /* height: 30px; */
   }
   .maindiv1 {
     width: auto;
@@ -466,13 +501,17 @@ tr{
     font-family: "Kohinoor Zerone";
     transition: 0.5s;
   }
+  .subdiv{
+    justify-content:space-between;
+  }
   .spec {
   }
   .para1 {
-    font-size: 18px;
+    font-size: 20px;
   }
   .para {
-    font-size: 20px;
+    font-size: 22px;
+    font-weight: 550;
   }
   .spec > h1 {
     font-size: 23px;
@@ -485,7 +524,8 @@ tr{
   }
   th {
     font-size: 15px;
-    white-space: nowrap;
+    /* white-space: nowrap; */
+    /* display: inline-block;  */
   }
   th > svg {
     width: 40px;
@@ -494,13 +534,12 @@ tr{
   }
   .maindiv2 {
     padding: 0px;
-  }
-  tr {
-    margin-bottom: 15px;
+    justify-content:end;
   }
   td {
     font-size: 15px;
     font-family: "outfit";
+    /* display: inline; */
   }
   .compount {
     display: none;

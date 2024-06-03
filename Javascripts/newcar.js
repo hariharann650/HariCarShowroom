@@ -100,7 +100,8 @@ totalCar.filter((value, index) => {
 // }
 var hellfireData =
 
- ` <div class="maindiv1">
+ ` 
+ <div class="maindiv1" id="maindiv1">
   <img class="mainimg" src="${hariCar.img}" alt="">
 </div>
 <div class="subshadow">
@@ -111,7 +112,7 @@ var hellfireData =
    <br>
     <p class="carmodel">${hariCar.price}</p><br>
   </div>
-  <button class="test">Book a Test Drive</button>
+  <button class="test" id="booking" >Book a Test Drive</button>
   <button class="test1">Configure& Price</button>
   
 
@@ -131,7 +132,99 @@ var hellfireData =
   </div>
 </div>
 </div>
+<div class="submit">
+ <img class="submit-img" src="./images/submit-successfully.svg" alt="">
+ <p class="submit-text">Test Drive Successfully Booked</p>
+</div>
+  <div class="black-background"></div>
+  <div class="top-level">
+  <div class="main-price">
+    <div class="top-para">
+      <h1>Book Your Test Drive</h1>
+    </div>
+    <button class="cancel-btn"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+      <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+    </svg></button>
+      <form class="forming" action="">
+        <div class="top-price">
+          <div class="bottom-price">
+            
+            <input class="inputing" placeholder="Name*" type="text">
+          </div>
+          <div class="bottom-price">
+            
+            <input class="inputing" placeholder="E-mail*" type="email">
+          </div>
 
+        </div>
+        <div class="top-price">
+          <div class="bottom-price">
+            <input class="inputing" placeholder="Mobile*" type="text">
+          </div>
+          <div class="bottom-price">
+            <select class="selecting" placeholder="" name="Fuel Type" id="">
+              <option value="Petrol">Fuel Type*</option>
+              <option value="Petrol">Petrol</option>
+              <option value="Petrol">Diesel</option>
+            </select>
+          </div>
+
+        </div>
+        <div class="top-price">
+          <div class="bottom-price">
+            <select class="selecting" placeholder="" name="Fuel Type" id="">
+              <option value="Petrol">Buyer Type*</option>
+              <option value="Petrol">My First Car</option>
+              <option value="Petrol">Additional Car</option>
+              <option value="Petrol">Exchange My Old car</option>
+            </select>
+          </div>
+          <div class="bottom-price">
+            <select class="selecting" placeholder="" name="Fuel Type" id="">
+              <option value="Petrol">State*</option>
+              <option value="Petrol">Tamil Nadu</option>
+              <option value="Petrol">Kerala</option>
+              <option value="Petrol">Karnataka</option>
+              <option value="Petrol">Pondicherry</option>
+            </select>
+          </div>
+
+        </div>
+        <div class="top-price">
+          <div class="bottom-price">
+            <select class="selecting" placeholder="" name="Fuel Type" id="">
+              <option value="Petrol">City*</option>
+              <option value="Petrol">Chennai</option>
+              <option value="Petrol">Salem</option>
+              <option value="Petrol">Trichy</option>
+              <option value="Petrol">thiruvaluvar</option>
+              <option value="Petrol">madurai</option>
+              <option value="Petrol">thanjavur</option>
+              <option value="Petrol">Thiruvarur</option>
+            </select>
+          </div>
+          <div class="bottom-price">
+            <select class="selecting" placeholder="" name="Fuel Type" id="">
+              <option value="Petrol">Dealer*</option>
+              <option value="Petrol">KUN Dealer </option>
+              <option value="Petrol">Nexa Dealer </option>
+              <option value="Petrol">Zaithun</option>
+            </select>
+          </div>
+
+        </div>
+      </form>
+      <div class="bottom-div">
+        <div class="sub-bottom">
+          <input type="checkbox">
+          <p class="disclaimer">Disclaimer: I agree that by clicking the ‘Submit’ button below, I am explicitly soliciting a call and message via whatsapp and any other medium from Hari Car Showroom.</p>
+        </div>
+        <div class="submit-div">
+          <button id="submitButton">Submit</button>
+        </div>
+      </div>
+  </div>
+</div>
   <div class="spec">
     <h1>KEY SPECS & FEATURES OF ${hariCar.model.toUpperCase()}</h1>
     <div class="buttondiv">
@@ -368,3 +461,46 @@ let abouting =`<div class="line">
     © 2023 Hari CarShowroom, All Rights Reserved.
   </div>`;
 document.querySelector  ('.about-main-div').innerHTML = abouting;
+
+var bookingButton = document.querySelector('#booking');
+var showing = document.querySelector(".top-level");
+var background = document.querySelector(".black-background");
+var isscrolling = false;
+
+bookingButton.addEventListener('click',()=>{
+  background.style.display = 'block';
+  showing.style.display = 'block';
+  isscrolling = true;
+  document.querySelector('.maindiv1').scrollIntoView({ behavior: "instant" });
+})
+var submitbutton = document.getElementById("submitButton");
+var submit = document.querySelector(".submit");
+
+submitbutton.addEventListener("click",()=>{
+  background.style.display="none";
+  showing.style.display = 'none';
+  isscrolling = false;
+  submit.style.display="block"
+
+  setTimeout(()=>{
+    submit.style.display="none";
+  },3000);
+})
+
+var cancelbutton = document.querySelector('.cancel-btn');
+cancelbutton.addEventListener('click',()=>{
+  background.style.display='none';
+  showing.style.display='none';
+  isscrolling= false;
+})
+
+window.addEventListener('scroll', ()=>{
+  if(window.innerWidth > 500){
+    if(isscrolling){
+      window.scrollTo(0,0);
+    }
+  }
+  else{
+    window.scrollTo(0,scrollY);
+  }
+})

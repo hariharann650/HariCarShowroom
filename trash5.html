@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Down Animation</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.submit-div {
+    padding: 20px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.target-div {
+    display: none; /* Initially hidden */
+    padding: 20px;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    transform: translateY(-200px); /* Start off-screen */
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+    </style>
+</head>
+<body>
+    <div id="submitDiv" class="submit-div">Submit</div>
+    <div id="targetDiv" class="target-div">This message will slide down and be visible for 3 seconds.</div>
+
+    <script>
+        document.getElementById('submitDiv').addEventListener('click', function() {
+    const targetDiv = document.getElementById('targetDiv');
+    targetDiv.style.display = 'block'; // Show the target div
+
+    // Force reflow to ensure the transition starts
+    targetDiv.offsetHeight;
+
+    // Start the animation by setting transform to 0
+    targetDiv.style.transform = 'translateY(0px)';
+
+    setTimeout(function() {
+        targetDiv.style.transform = 'translateY(-200px)'; // Hide the target div by sliding it up
+        // After the animation completes, hide the div
+        setTimeout(function() {
+            targetDiv.style.display = 'none';
+        }, 500); // 500 milliseconds = duration of the transform transition
+    }, 3000); // 3000 milliseconds = 3 seconds
+});
+
+    </script>
+</body>
+</html>

@@ -1,14 +1,5 @@
 import { latestcar, suv  , luxury, hatchback,sedan,mpv} from "./carModels.js";
  var noing = JSON.parse(localStorage.getItem('apple'));
-//  var effer = JSON.parse(localStorage.getItem('effer'));
-// noing = aahin();
-// var orange = localStorage.getItem('dhinesh');
-// // var orange1 = eval('(' +orange + ')');
-// var orange1 = new Function('return ' + orange)();
-// console.log(orange1);
-// orange1();
-
-// console.log(noing);
 
 function handleButtonClick(event) {
   var uniqueId = event.currentTarget.getAttribute('data-unique-id');
@@ -43,8 +34,6 @@ var latest = latestcar.map(cars =>`<div class="carousel-item active item1 ak1" >
 </div>
 </div>`).join('');
 document.querySelector('.inner1').innerHTML = latest;
-//  console.log(latest);
-
 
 document.querySelectorAll('.checkbutton').forEach(button =>{
   button.addEventListener('click',()=>{
@@ -53,30 +42,18 @@ document.querySelectorAll('.checkbutton').forEach(button =>{
     var datadetailsmodel2 = button.dataset.sentence2;
     var van = '';
     van = 1;
-    // var nothing = '';
-    // console.log(nothing);
-    // if(nothing == 0 ){
-    //   van =1;
-    // }else{
-    //   van =2;
-    // }
 
     localStorage.setItem('datadetails2',JSON.stringify(datadetails2));
     localStorage.setItem('datadetailsmodel2',JSON.stringify(datadetailsmodel2));
     localStorage.setItem('van',van);
     
     window.location.href = 'newcar.html';
-    // return van;
+
   });
 });
 
-    // var totalCar;
-    // if(totalCar = )
-    // localStorage.setItem('datadetails',JSON.stringify());
-    // window.location.href ='newcar.html';
     var selectbtn = document.querySelectorAll('.subing');
-    //  var latestcar1;  
-    
+
     var apple1 = [suv,hatchback,luxury,sedan,mpv];
     var apple = apple1[0];
     apple = noing;
@@ -140,17 +117,11 @@ selectbtn.forEach(button => {
       button.style.color = "#ffff";   
       
       localStorage.setItem('apple',JSON.stringify(apple));
-      // localStorage.setItem('effer',JSON.stringify(effer));
-      // var dhinesh = dinesh.toString();
-      // localStorage.setItem('dhinesh',dhinesh);
-      // console.log(dhinesh);
+
     }
     })
   })
-        
-      // let  appling = apple
 
-      // console.log(apple);
       function aahin(){
         var latest1 = apple.map(cars =>`<div class="carousel-item active item1 ak2" >
         <div class="card newcard">
@@ -163,7 +134,7 @@ selectbtn.forEach(button => {
         </div>
         </div>`).join('');
         document.querySelector('.inner2').innerHTML = latest1;
-        // localStorage.setItem('aahin',JSON.stringify(aahin));
+
       }
       aahin();
 function okie(){
@@ -173,21 +144,13 @@ function okie(){
     var datadetails2 = button.dataset.sentence;
     var datadetailsmodel2 = button.dataset.sentence2;
     console.log(datadetails2);
-    // let van = '';
-    var van = 1;
-    // var nothing = '';
 
-    // if(nothing == 0 ){
-    //   van =1;
-    // }else{
-    //   van =2;
-    // }
-    
+    var van = 1;
+ 
     localStorage.setItem('van',JSON.stringify(van));
     localStorage.setItem('datadetails2',JSON.stringify(datadetails2));
     localStorage.setItem('datadetailsmodel2',JSON.stringify(datadetailsmodel2));
-    // localStorage.setItem('van',van);
-    // localStorage.setItem('aahin()',aahin);
+
     window.location.href = 'newcar.html';
 
   });
@@ -195,81 +158,6 @@ function okie(){
   
 }
 okie();
-
-
-var multipleCardCarousel = document.querySelector("#carouselExampleControls1");
-
-
-if (window.matchMedia("(min-width: 768px)").matches) {
-  var carousel = new bootstrap.Carousel(multipleCardCarousel, {
-    interval: false
-  });
-
-  var carouselInner1 = document.querySelector("#carouselExampleControls1 .inner1");
-  var carouselWidth1 = carouselInner1.scrollWidth;
-  var cardWidth1 = document.querySelector("#carouselExampleControls1 .ak1").offsetWidth;
-  var scrollPosition1 = 0;
-
-  document.querySelector("#carouselExampleControls1 .next").addEventListener("click", function () {
-    if (scrollPosition1 < carouselWidth1 - cardWidth1 * 4) {
-      scrollPosition1 += cardWidth1;
-      // console.log("the schorl");
-      carouselInner1.scrollTo({
-        left: scrollPosition1,
-        behavior: 'smooth'
-      });
-    }
-  });
-  
-  document.querySelector("#carouselExampleControls1 .prev").addEventListener("click", function () {
-    if (scrollPosition1 > 0) {
-      scrollPosition1 -= cardWidth1;
-      // console.log("the prev");
-      carouselInner1.scrollTo({
-        left: scrollPosition1,
-        behavior: 'smooth'
-      });
-    }
-  });
-} else {
-  multipleCardCarousel.classList.add("slide");
-}
-
-
-var multipleCardCarousel1 = document.querySelector("#carouselExampleControls2");
-
-if (window.matchMedia("(min-width: 768px)").matches) {
-  var carousel1 = new bootstrap.Carousel(multipleCardCarousel1, {
-    interval: false
-  });
-
-  var carouselInner = document.querySelector("#carouselExampleControls2 .inner2");
-  var carouselWidth = carouselInner.scrollWidth;
-  var cardWidth = document.querySelector("#carouselExampleControls2 .ak2").offsetWidth;
-  var scrollPosition = 0;
-
-  document.querySelector("#carouselExampleControls2 .nexting").addEventListener("click", function () {
-    if (scrollPosition < carouselWidth - cardWidth * 4) {
-      scrollPosition += cardWidth;
-      carouselInner.scrollTo({
-        left: scrollPosition,
-        behavior: 'smooth'
-      });
-    }
-  });
-
-  document.querySelector("#carouselExampleControls2 .preving").addEventListener("click", function () {
-    if (scrollPosition > 0) {
-      scrollPosition -= cardWidth;
-      carouselInner.scrollTo({
-        left: scrollPosition,
-        behavior: 'smooth'
-      });
-    }
-  });
-} else {
-  multipleCardCarousel1.classList.add("slide");
-}
 
 let abouting =`<div class="line">
   </div>

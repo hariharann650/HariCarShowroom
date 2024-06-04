@@ -376,7 +376,8 @@ p {
   padding-left: 7px;
   padding-right: 0px;
   column-gap: 5px;
-  /* overflow: hidden; */
+  overflow-x:auto;
+  scrollbar-width: none;
 }
 .newcard {
   margin: 0 0.5em;
@@ -417,6 +418,7 @@ p {
 
 .carouselfirstone {
   position: relative;
+  overflow: hidden;
 }
 
 .next {

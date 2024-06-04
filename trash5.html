@@ -3,68 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slide Down Animation</title>
+    <title>Horizontal Scroll without Scrollbar</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        body {
+    body {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
+    overflow: hidden; /* Prevent overflow in both directions */
 }
 
-.submit-div {
-    padding: 20px;
+.scroll-wrapper {
+    width: 90%;
+    overflow: hidden; /* Hide the scrollbar */
+}
+
+.scroll-container {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    gap: 10px; /* Add space between boxes */
+    scrollbar-width: none; /* Firefox */
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.box {
+    min-width: 100px;
+    height: 100px;
     background-color: blue;
     color: white;
-    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
     border-radius: 5px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.target-div {
-    display: none; /* Initially hidden */
-    padding: 20px;
-    background-color: green;
-    color: white;
-    border-radius: 5px;
-    text-align: center;
-    position: relative;
-    transform: translateY(-200px); /* Start off-screen */
-    transition: transform 0.5s ease-in-out; /* Smooth transition */
+    flex-shrink: 0; /* Prevent shrinking */
 }
 
     </style>
 </head>
 <body>
-    <div id="submitDiv" class="submit-div">Submit</div>
-    <div id="targetDiv" class="target-div">This message will slide down and be visible for 3 seconds.</div>
+    <div class="scroll-wrapper">
+        <div class="scroll-container">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+            <div class="box">7</div>
+            <div class="box">8</div>
+            <div class="box">9</div>
+            <div class="box">10</div>
+        </div>
+    </div>
 
-    <script>
-        document.getElementById('submitDiv').addEventListener('click', function() {
-    const targetDiv = document.getElementById('targetDiv');
-    targetDiv.style.display = 'block'; // Show the target div
 
-    // Force reflow to ensure the transition starts
-    targetDiv.offsetHeight;
-
-    // Start the animation by setting transform to 0
-    targetDiv.style.transform = 'translateY(0px)';
-
-    setTimeout(function() {
-        targetDiv.style.transform = 'translateY(-200px)'; // Hide the target div by sliding it up
-        // After the animation completes, hide the div
-        setTimeout(function() {
-            targetDiv.style.display = 'none';
-        }, 500); // 500 milliseconds = duration of the transform transition
-    }, 3000); // 3000 milliseconds = 3 seconds
-});
-
-    </script>
+    <div class="carousel-item active item1 ak1" >
+        <div class="card newcard">
+          <div class="img-wrapper"><img src="${cars.img}" class="d-block w-100" alt="..."> </div>
+          <div class="card-body">
+            <p class="card-title title1">${cars.name}</p>
+            <p class="card-text title2">${cars.price}</p>
+            <button class="checkbutton" data-sentence="${cars.name}" data-sentence2="${cars.id}">Check Offers</button>
+          </div>
+        </div>
+        </div>
 </body>
 </html>

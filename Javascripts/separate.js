@@ -1,9 +1,4 @@
-// var nothing = document.querySelector('.input1');
-// var nothing1 = document.querySelector('.svg1').addEventListener('click',nothing3);
-// var nothing2 = document.querySelectorAll('.list1');
-// function nothing3 () {
-//  nothing.style.display ='block';
-//  nothing2.style.display ='inline-block';
+
 var nothing = document.querySelector('.input1');
 var svgElement = document.querySelector('#svg1');
 var svgElement1 = document.querySelector('#cancelid');
@@ -18,7 +13,7 @@ function nothing3() {
   svgElement.style.display = 'none';
   svgElement1.style.display = 'block';
 
-  // Loop through each element in nothing2 NodeList
+
   nothing2.forEach(function(element) {
     element.style.display = 'none';
     noo = 1;
@@ -46,3 +41,22 @@ function nothing3() {
     }
   }
   
+  
+  function updateVideoSource() {
+    var video = document.getElementById('responsiveVideo');
+    var source = document.getElementById('videoSource');
+
+    if (window.innerWidth < 550) {
+        source.src = "images/mobile.mp4.crdownload";
+    } 
+    else {
+        source.src = "images/video.mp4";
+    }
+
+    video.load();
+
+}
+
+window.addEventListener('resize', updateVideoSource);
+window.addEventListener('load', updateVideoSource);
+

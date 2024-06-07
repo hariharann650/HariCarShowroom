@@ -163,7 +163,7 @@ let abouting =`<div class="line">
         </svg>
       </a>
       </ul>
-      <ul> <a class="about-link" href="https://www.linkedin.com/in/hariharan-725101187/" target="_blank"> Linked In &nbsp; &nbsp;
+      <ul> <a class="about-link" href="https://www.linkedin.com/in/hariharandeveloper/" target="_blank"> Linked In &nbsp; &nbsp;
         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 28.87 28.87" id="linkedin">
           <g data-name="Layer 2">
             <g data-name="Layer 1">
@@ -204,3 +204,4 @@ let abouting =`<div class="line">
     © 2023 Hari CarShowroom, All Rights Reserved.
   </div>`;
 document.querySelector  ('.about-main-div').innerHTML = abouting;
+

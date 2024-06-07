@@ -115,9 +115,9 @@ p {
   /* from{left:-100%;}
   to{left:0%;} */
   0% {
-    left: -120%;
+    left: -220%;
   }
-  70% {
+  65%,100% {
     left: 0%;
   }
 }
@@ -379,6 +379,7 @@ p {
   overflow-x:auto;
   scrollbar-width: none;
 }
+
 .newcard {
   margin: 0 0.5em;
   border: none;
@@ -417,8 +418,8 @@ p {
 }
 
 .carouselfirstone {
-  position: relative;
-  overflow: hidden;
+  /* position: relative; */
+  overflow: clip;
 }
 
 .next {
@@ -447,7 +448,7 @@ p {
 }
 .checkbutton {
   background: #fff;
-  border: 1px solid #f75d34;
+  border: 1px solid #f75d34 ;
   border-radius: 2px;
   color: #f75d34;
   cursor: pointer;
